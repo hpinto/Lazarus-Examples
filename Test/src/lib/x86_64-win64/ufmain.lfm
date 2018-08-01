@@ -1,0 +1,122 @@
+object FMain: TFMain
+  Left = 799
+  Height = 425
+  Top = 137
+  Width = 270
+  Caption = 'FMain'
+  ClientHeight = 425
+  ClientWidth = 270
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 376
+    Top = 49
+    Width = 270
+    Align = alBottom
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Alignment = taCenter
+        Title.Color = clYellow
+        Title.Font.Color = clNavy
+        Title.Font.Style = [fsBold]
+        Title.Caption = 'N°'
+        Width = 30
+        FieldName = 'idTest'
+      end    
+      item
+        Title.Alignment = taCenter
+        Title.Color = clYellow
+        Title.Font.Color = clNavy
+        Title.Font.Style = [fsBold]
+        Title.Caption = 'Nombre'
+        Width = 200
+        FieldName = 'Testcol'
+      end>
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 16
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
+    Properties.Strings = (
+      'AutoEncodeStrings='
+    )
+    Connected = True
+    HostName = '192.168.0.146'
+    Port = 3306
+    Database = 'Dev'
+    User = 'root'
+    Password = 'hubnet-1'
+    Protocol = 'mysqld-5'
+    LibraryLocation = 'C:\Program Files\MySQL\MySQL Workbench 6.3 CE\libmysql.dll'
+    left = 32
+    top = 48
+  end
+  object ZTable1: TZTable
+    Connection = ZConnection1
+    Active = True
+    TableName = 'Test'
+    SequenceField = 'idTest'
+    left = 32
+    top = 160
+    object ZTable1idTest: TLongintField
+      FieldKind = fkData
+      FieldName = 'idTest'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZTable1Testcol: TStringField
+      FieldKind = fkData
+      FieldName = 'Testcol'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 180
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ZTable1
+    left = 32
+    top = 216
+  end
+  object CSVExporter1: TCSVExporter
+    Dataset = ZTable1
+    ExportFields = <>
+    RestorePosition = False
+    FormatSettings.DecimalSeparator = #0
+    FormatSettings.CurrencyDigits = 0
+    FormatSettings.FieldDelimiter = ','
+    FormatSettings.IgnoreOuterWhitespace = False
+    FormatSettings.RowDelimiter = #13#10
+    FormatSettings.QuoteChar = '"'
+    left = 32
+    top = 280
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.csv'
+    Filter = 'CSV Files|*.csv'
+    left = 32
+    top = 104
+  end
+  object FPDataExporter1: TFPDataExporter
+    Dataset = ZTable1
+    left = 120
+    top = 168
+  end
+end

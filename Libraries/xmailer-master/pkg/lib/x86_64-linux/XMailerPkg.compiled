@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1454174389"/>
+  <Params Value=" -MObjFPC -Scghi -Cg -O1 -g -gl -l -vewnhibq -Fu/home/jano/Dropbox/Devel/Lazarus/Libraries/xmailer-master/src -Fu/home/jano/Dropbox/Devel/Lazarus/Libraries/xmailer-master/3rdparty/synapse/source/lib -Fu/home/jano/Dropbox/Devel/Lazarus/Libraries/xmailer-master/pkg/ -FU/home/jano/Dropbox/Devel/Lazarus/Libraries/xmailer-master/pkg/lib/x86_64-linux/ xmailerpkg.pas"/>
+</CONFIG>

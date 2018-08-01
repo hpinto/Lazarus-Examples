@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1454174389"/>
+  <Params Value=" -MObjFPC -Scghi -CX -Cg -Os1 -g -gl -Xg -XX -l -vewnhibq -Fi/home/jano/Dropbox/Devel/Lazarus/ExcelAEmail/lib/x86_64-linux -Fl/home/jano/Dropbox/Devel/Lazarus/ExcelAEmail/C:/lazarus/components/synapse40/source/lib -Fl/home/jano/Dropbox/Devel/Lazarus/ExcelAEmail/C:/lazarus/components/synapse40/source/lib/lib/x86_64-win64 -Fl/opt/gnome/lib -Fu/usr/lib/lazarus/1.6/lcl/units/x86_64-linux/gtk2 -Fu/usr/lib/lazarus/1.6/lcl/units/x86_64-linux -Fu/usr/lib/lazarus/1.6/components/lazutils/lib/x86_64-linux -Fu/home/jano/Dropbox/Devel/Lazarus/Libraries/xmailer-master/pkg/lib/x86_64-linux -Fu/usr/lib/lazarus/1.6/packager/units/x86_64-linux -Fu/home/jano/Dropbox/Devel/Lazarus/ExcelAEmail/ -FU/home/jano/Dropbox/Devel/Lazarus/ExcelAEmail/lib/x86_64-linux/ -dLCL -dLCLgtk2 ExcelAEmail.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>
